@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="3.css" />
+    <title>Message to My Bestie</title>
+  </head>
+  <body>
+    <div class="container">
+      <p>Hey there!</p>
+      <p>
+        I just wanted to let you know how much I value our friendship. You're
+        not just my bestie; you're like a sister to me. I cherish every moment
+        we share, and the bond we have is incredibly special to me.
+      </p>
+      <p>
+        I don't want anything to come between us. You mean the world to me, and
+        I want us to continue being the best of friends, supporting each other
+        through thick and thin.
+      </p>
+      <p>
+        And I hope you know I'm here for you too, no matter what. Let's keep
+        making beautiful memories and growing together as friends.
+      </p>
+      <p>Thank you for being the amazing person you are!</p>
+
+      <!-- Comment Section -->
+      <form id="commentForm">
+        <label for="comment" class="reply-label">Leave a comment:</label>
+        <textarea
+          id="comment"
+          name="comment"
+          rows="4"
+          cols="50"
+          required
+        ></textarea>
+        <button type="button" class="nav-button" onclick="sendCommentByEmail()">
+          Send To Admin
+        </button>
+      </form>
+      <br />
+      <div>
+        <a href="https://www.youtube.com/shorts/cOKo27lmHY8" class="nav-button"
+          >Exit</a
+        >
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      function sendCommentByEmail() {
+        const comment = document.getElementById("comment").value;
+        const subject = "Comment from a Friend";
+        const recipient = "sohailmudabbir@gmail.com"; // Replace with the recipient's email address
+        const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(
+          subject
+        )}&body=${encodeURIComponent(comment)}`;
+        window.location.href = mailtoLink;
+      }
+    </script>
+  </body>
+</html>
